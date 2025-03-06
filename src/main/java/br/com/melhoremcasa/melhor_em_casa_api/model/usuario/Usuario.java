@@ -1,22 +1,22 @@
 package br.com.melhoremcasa.melhor_em_casa_api.model.usuario;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nome;
 
@@ -26,10 +26,12 @@ public class Usuario {
     @Column(nullable = false)
     private String senha;
 
-    @Column(unique = true, nullable = false, length = 11)
+    @Column(nullable = false, unique = true)
+    @JsonProperty("cpf")
     private String cpf;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private TipoUsuario tipoUsuario;
 
 }
