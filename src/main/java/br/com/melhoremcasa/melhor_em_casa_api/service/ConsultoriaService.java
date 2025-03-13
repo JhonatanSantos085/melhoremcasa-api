@@ -7,23 +7,26 @@ import br.com.melhoremcasa.melhor_em_casa_api.model.usuario.Usuario;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.ConsultoriaRepository;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.PacienteRepository;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.UsuarioRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class ConsultoriaService {
 
-    @Autowired
-    private ConsultoriaRepository consultoriaRepository;
 
-    @Autowired
-    private PacienteRepository pacienteRepository;
+    private final ConsultoriaRepository consultoriaRepository;
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+
+    private final PacienteRepository pacienteRepository;
+
+
+    private final UsuarioRepository usuarioRepository;
 
     public Consultoria criarConsultoria(ConsultoriaRequestDTO dto) {
         Optional<Paciente> pacienteOpt = pacienteRepository.findById(dto.pacienteId());
@@ -43,7 +46,10 @@ public class ConsultoriaService {
 
         return consultoriaRepository.save(consultoria);
     }
-    
+
+    public List<Consultoria> mostrarConsultorias(){
+        return consultoriaRepository.findAll();
+    }
 
 
 }
