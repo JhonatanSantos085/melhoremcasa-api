@@ -21,14 +21,15 @@ public class Paciente {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private TipoPaciente tipoPaciente;
+    private TipoPaciente tipoPaciente = TipoPaciente.INATIVO;
 
     private String nome;
+
+    private int idade;
 
     @Column(name = "data_nascimento", nullable = false)
     private LocalDate data_nascimento;
 
-    @Column(unique = true, nullable = false, length = 11)
     private String cpf;
 
     private String cid;
