@@ -25,6 +25,8 @@ public class Paciente {
 
     private String nome;
 
+    private int idade;
+
     @Column(name = "data_nascimento", nullable = false)
     private LocalDate data_nascimento;
 

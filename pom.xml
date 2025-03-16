@@ -41,25 +41,31 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- Lombok (com versão explícita e sem <optional>) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- Para processar anotações corretamente no IntelliJ -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok-mapstruct-binding</artifactId>
 			<version>0.2.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Dependências de Segurança -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
