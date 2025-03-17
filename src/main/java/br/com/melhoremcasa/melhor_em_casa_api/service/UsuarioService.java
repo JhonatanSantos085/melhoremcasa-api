@@ -15,12 +15,23 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
 
     public Usuario criarUsuario(Usuario usuario){
-        System.out.println(usuario.getCpf());
         return usuarioRepository.save(usuario);
     }
 
     public List<Usuario> getAllUsers(){
         return usuarioRepository.findAll();
+    }
+
+    public Usuario atualizarUsuario(Long id, Usuario usuarioDetalhado){
+        var usuario = usuarioRepository.findById(id).orElseThrow();
+        usuario.setNome(usuarioDetalhado.getNome());
+        return usuarioRepository.save(usuario);
+
+    }
+
+    public void deletarUsuario(Long id){
+        var usuario = usuarioRepository.findById(id).orElseThrow();
+        usuarioRepository.delete(usuario);
     }
 
 }
