@@ -19,6 +19,7 @@ public class ConsultoriaController {
 
     private final ConsultoriaService consultoriaService;
 
+
     @PostMapping
     public ResponseEntity<Consultoria> criarConsultoria(@RequestBody ConsultoriaRequestDTO dto) {
         var novaConsultoria = consultoriaService.criarConsultoria(dto);
