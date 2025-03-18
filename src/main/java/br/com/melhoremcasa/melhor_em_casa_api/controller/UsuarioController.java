@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/usuarios")
 @RequiredArgsConstructor
 public class UsuarioController {
-
     private final UsuarioService usuarioService;
 
 
@@ -24,12 +24,25 @@ public class UsuarioController {
         Usuario novoUsuario = usuarioService.criarUsuario(usuario);
         return new ResponseEntity<>(novoUsuario, HttpStatus.CREATED);
     }
+    
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody Usuario usuario) {
+        Usuario usuarioEncontrado = usuarioService.verificarCredenciais(usuario.getLogin(), usuario.getSenha());
+
+        if (usuarioEncontrado != null) {
+            return ResponseEntity.ok(usuarioEncontrado);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas");
+        }
+    }
+
 
     @GetMapping
     public ResponseEntity<List<Usuario>> getAllUsers(){
         List<Usuario> users = usuarioService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioDetalhado){
@@ -45,4 +58,5 @@ public class UsuarioController {
 
 
 }
+
 
