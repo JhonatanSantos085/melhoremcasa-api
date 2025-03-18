@@ -21,14 +21,25 @@ public class ConsultoriaController {
 
     @PostMapping
     public ResponseEntity<Consultoria> criarConsultoria(@RequestBody ConsultoriaRequestDTO dto) {
-        Consultoria novaConsultoria = consultoriaService.criarConsultoria(dto);
+        var novaConsultoria = consultoriaService.criarConsultoria(dto);
         return new ResponseEntity<>(novaConsultoria, HttpStatus.CREATED);
     }
 
     @GetMapping
     public ResponseEntity<List<Consultoria>> mostrarConsultorias(){
-        List<Consultoria> consultorias = consultoriaService.mostrarConsultorias();
+        var consultorias = consultoriaService.mostrarConsultorias();
         return new ResponseEntity<>(consultorias, HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Consultoria> atualizarConsultoria(@PathVariable Long id, @RequestBody ConsultoriaRequestDTO dto){
+        return ResponseEntity.ok(consultoriaService.atualizarConsultoria(id, dto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarConsultoria(@PathVariable Long id){
+        consultoriaService.deletarConsultoria(id);
+        return ResponseEntity.noContent().build();
     }
 
 
