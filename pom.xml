@@ -55,6 +55,14 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Dependência para Servlet API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version> <!-- Ou a versão mais recente -->
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Testes -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
