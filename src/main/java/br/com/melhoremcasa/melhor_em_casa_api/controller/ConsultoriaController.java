@@ -1,10 +1,9 @@
 package br.com.melhoremcasa.melhor_em_casa_api.controller;
 
 import br.com.melhoremcasa.melhor_em_casa_api.model.consultoria.Consultoria;
-import br.com.melhoremcasa.melhor_em_casa_api.model.consultoria.ConsultoriaRequestDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.ConsultoriaRequestDTO;
 import br.com.melhoremcasa.melhor_em_casa_api.service.ConsultoriaService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +17,7 @@ public class ConsultoriaController {
 
 
     private final ConsultoriaService consultoriaService;
+
 
     @PostMapping
     public ResponseEntity<Consultoria> criarConsultoria(@RequestBody ConsultoriaRequestDTO dto) {
