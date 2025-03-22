@@ -25,15 +25,16 @@ public class Usuario {
     private String login;
 
     @Column(nullable = false)
-    @JsonIgnore
     private String senha;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     @JsonProperty("cpf")
     private String cpf;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TipoUsuario tipoUsuario;
+
+
 
 }

@@ -20,9 +20,14 @@ public class AuthService {
 
     public String authenticate(String username, String password) {
         try {
+            // Verifique se as credenciais estão corretas
+            System.out.println("Tentando autenticar usuário: " + username);
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+
+            // Gerar o token após autenticação bem-sucedida
             return jwtUtil.generateToken(username);
         } catch (BadCredentialsException e) {
+            System.out.println("Credenciais inválidas!");
             throw new CustomException("Credenciais inválidas!");
         }
     }
