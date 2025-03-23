@@ -24,7 +24,7 @@ public class JwtSecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login", "/usuarios/register", "/h2-console/**").permitAll()
+                        .requestMatchers("/auth/login", "/usuarios/register", "/h2-console/**","/home").permitAll()
                         .anyRequest().authenticated()
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
