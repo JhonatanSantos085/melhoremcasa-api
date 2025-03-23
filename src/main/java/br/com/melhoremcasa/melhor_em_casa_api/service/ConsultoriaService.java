@@ -1,14 +1,13 @@
 package br.com.melhoremcasa.melhor_em_casa_api.service;
 
 import br.com.melhoremcasa.melhor_em_casa_api.model.consultoria.Consultoria;
-import br.com.melhoremcasa.melhor_em_casa_api.model.consultoria.ConsultoriaRequestDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.ConsultoriaRequestDTO;
 import br.com.melhoremcasa.melhor_em_casa_api.model.paciente.Paciente;
 import br.com.melhoremcasa.melhor_em_casa_api.model.usuario.Usuario;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.ConsultoriaRepository;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.PacienteRepository;
 import br.com.melhoremcasa.melhor_em_casa_api.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

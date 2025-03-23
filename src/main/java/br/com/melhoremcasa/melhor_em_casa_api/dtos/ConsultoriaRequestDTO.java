@@ -1,4 +1,4 @@
-package br.com.melhoremcasa.melhor_em_casa_api.model.consultoria;
+package br.com.melhoremcasa.melhor_em_casa_api.dtos;
 
 import java.time.LocalDate;
 
