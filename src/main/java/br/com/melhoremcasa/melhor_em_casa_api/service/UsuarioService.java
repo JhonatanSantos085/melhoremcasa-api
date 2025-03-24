@@ -51,6 +51,12 @@ public class UsuarioService {
         return usuarioMapper.toDTO(usuario);
     }
 
+    public Usuario buscarPorLogin(String login){
+        return usuarioRepository.findByLogin(login).orElseThrow(
+                () -> new CustomException("Usuário não encontrado", HttpStatus.NOT_FOUND)
+        );
+    }
+
     // Verifica as credenciais do usuário
     public Usuario verificarCredenciais(String login, String senha) {
         Optional<Usuario> usuarioOptional = usuarioRepository.findByLogin(login);
