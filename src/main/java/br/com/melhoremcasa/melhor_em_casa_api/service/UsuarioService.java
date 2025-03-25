@@ -1,7 +1,7 @@
 package br.com.melhoremcasa.melhor_em_casa_api.service;
 
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.UsuarioRequestDTO;
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.UsuarioResponseDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.usuario_dtos.UsuarioRequestDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.usuario_dtos.UsuarioResponseDTO;
 import br.com.melhoremcasa.melhor_em_casa_api.exception.CustomException;
 import br.com.melhoremcasa.melhor_em_casa_api.mapper.UsuarioMapper;
 import br.com.melhoremcasa.melhor_em_casa_api.model.usuario.Usuario;

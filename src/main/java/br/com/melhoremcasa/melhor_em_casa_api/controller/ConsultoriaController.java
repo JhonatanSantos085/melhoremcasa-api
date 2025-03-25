@@ -1,7 +1,7 @@
 package br.com.melhoremcasa.melhor_em_casa_api.controller;
 
 import br.com.melhoremcasa.melhor_em_casa_api.model.consultoria.Consultoria;
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.ConsultoriaRequestDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.consultoria_dtos.ConsultoriaRequestDTO;
 import br.com.melhoremcasa.melhor_em_casa_api.service.ConsultoriaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

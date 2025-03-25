@@ -1,8 +1,8 @@
 package br.com.melhoremcasa.melhor_em_casa_api.controller;
 
 
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.LoginRequest;
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.LoginResponse;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.login_dtos.LoginRequest;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.login_dtos.LoginResponse;
 import br.com.melhoremcasa.melhor_em_casa_api.model.usuario.Usuario;
 import br.com.melhoremcasa.melhor_em_casa_api.service.AuthService;
 import br.com.melhoremcasa.melhor_em_casa_api.service.UsuarioService;

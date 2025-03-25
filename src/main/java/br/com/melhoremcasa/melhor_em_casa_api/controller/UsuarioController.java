@@ -1,7 +1,7 @@
 package br.com.melhoremcasa.melhor_em_casa_api.controller;
 
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.UsuarioRequestDTO;
-import br.com.melhoremcasa.melhor_em_casa_api.dtos.UsuarioResponseDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.usuario_dtos.UsuarioRequestDTO;
+import br.com.melhoremcasa.melhor_em_casa_api.dtos.usuario_dtos.UsuarioResponseDTO;
 import br.com.melhoremcasa.melhor_em_casa_api.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
