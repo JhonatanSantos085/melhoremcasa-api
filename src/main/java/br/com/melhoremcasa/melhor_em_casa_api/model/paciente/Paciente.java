@@ -1,13 +1,12 @@
 package br.com.melhoremcasa.melhor_em_casa_api.model.paciente;
 
 
-import br.com.melhoremcasa.melhor_em_casa_api.model.Endereco;
+import br.com.melhoremcasa.melhor_em_casa_api.model.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Getter
@@ -21,7 +20,7 @@ public class Paciente {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private TipoPaciente tipoPaciente = TipoPaciente.INATIVO;
+    private TipoPaciente tipoPaciente = TipoPaciente.CONSULTORIA;
 
     private String nome;
 

@@ -1,4 +1,4 @@
-package br.com.melhoremcasa.melhor_em_casa_api.dtos;
+package br.com.melhoremcasa.melhor_em_casa_api.dtos.usuario_dtos;
 
 import br.com.melhoremcasa.melhor_em_casa_api.model.usuario.TipoUsuario;
 import lombok.Getter;

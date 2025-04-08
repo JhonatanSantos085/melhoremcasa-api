@@ -37,4 +37,8 @@ public class Consultoria {
 
     private String solicitante;
 
+    private ClassificacaoAtendimento classificacaoAtendimento; // Definido se for "Aguardando primeira VD"
+
+    private StatusConsultoria statusConsultoria;
+
 }

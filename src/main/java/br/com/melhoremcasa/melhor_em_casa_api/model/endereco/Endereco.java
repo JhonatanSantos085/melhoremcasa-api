@@ -1,12 +1,10 @@
-package br.com.melhoremcasa.melhor_em_casa_api.model;
+package br.com.melhoremcasa.melhor_em_casa_api.model.endereco;
 
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.UUID;
 
 @Entity
 @Data
